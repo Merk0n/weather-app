@@ -1,1 +1,1 @@
-console.log("XD");
+(()=>{console.log("XD");const e=document.querySelector("img");fetch("https://api.giphy.com/v1/gifs/translate?api_key=SAYes8i0ch0qq5OYo03U5Wk2nD5sb88J&s=cats",{mode:"cors"}).then((e=>e.json())).then((s=>{e.src=s.data.images.original.url}))})();
