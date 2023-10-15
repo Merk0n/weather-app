@@ -1,3 +1,72 @@
-h1 {
-  color: red;
+:root {
+  --text-color: #e9ecef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  min-height: 100%;
+  background-image: url(../img/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+body {
+  color: var(--text-color);
+  padding: 3rem;
+}
+
+main {
+  display: flex;
+}
+
+/* weather-information (left side) */
+.weather-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.search-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  height: 40px;
+  border-bottom: 2px solid var(--text-color);
+  padding: 6px 12px;
+  margin-top: 1rem;
+}
+
+.search-box__input {
+  height: 100%;
+  max-width: 200px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+::placeholder {
+  color: var(--text-color);
+}
+
+.search-box__icon {
+  height: 24px;
+  min-width: 24px;
+  background-image: url(../img/search-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
