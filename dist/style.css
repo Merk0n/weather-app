@@ -98,6 +98,11 @@ main {
   margin-top: 1rem;
 }
 
+.weather-information__icon {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
 /* weather details (right side) */
 .weather-details-container {
   display: flex;
@@ -124,9 +129,6 @@ main {
   justify-content: center;
 }
 
-.weather-details__info {
-}
-
 .weather-details__data {
   font-weight: 600;
   font-size: 2rem;
@@ -134,4 +136,9 @@ main {
 
 /* bottom of page - forecast daily */
 .forecast-daily-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 25vh;
+  align-items: flex-end;
 }
