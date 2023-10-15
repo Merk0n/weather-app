@@ -9,10 +9,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.w400 {
-  font-weight: 400;
-}
-
 .w600 {
   font-weight: 600;
 }
@@ -32,15 +28,14 @@ body {
 
 main {
   display: flex;
+  height: 60vh;
 }
 
 /* weather-information (left side) */
 .weather-left {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   width: 40%;
-  height: 80vh;
 }
 
 .search-box {
@@ -101,4 +96,42 @@ main {
 .weather-information__description {
   font-size: 1.5rem;
   margin-top: 1rem;
+}
+
+/* weather details (right side) */
+.weather-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 12%;
+
+  float: right;
+  align-items: flex-start;
+  margin-left: auto;
+}
+.weather-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weather-details__icon {
+  display: flex;
+  margin-right: 1rem;
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-details__info {
+}
+
+.weather-details__data {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* bottom of page - forecast daily */
+.forecast-daily-container {
 }
