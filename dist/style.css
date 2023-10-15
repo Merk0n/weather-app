@@ -6,7 +6,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.w400 {
+  font-weight: 400;
+}
+
+.w600 {
+  font-weight: 600;
 }
 
 html {
@@ -27,13 +35,12 @@ main {
 }
 
 /* weather-information (left side) */
-.weather-information {
+.weather-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   width: 40%;
   height: 80vh;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .search-box {
@@ -46,6 +53,7 @@ main {
   border-bottom: 2px solid var(--text-color);
   padding: 6px 12px;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .search-box__input {
@@ -69,4 +77,28 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+.weather-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-information__location {
+  font-size: 3rem;
+}
+
+.weather-information__date,
+.weather-information__time {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.weather-information__temperature {
+  font-size: 5rem;
+  margin-top: 1rem;
+}
+.weather-information__description {
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }

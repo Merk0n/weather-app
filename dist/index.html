@@ -5,26 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- font mont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;600&family=Press+Start+2P&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <div class="weather-information">
+      <div class="weather-left">
         <div class="search-box">
           <input
             type="text"
             placeholder="Enter city name"
-            class="search-box__input"
+            class="search-box__input w600"
           />
           <div class="search-box__icon"></div>
         </div>
-        <div class="weather-information__location"></div>
-        <div class="weather-information__date"></div>
-        <div class="weather-information__time"></div>
-        <div class="weather-information__temperature"></div>
-        <div class="weather-information__description"></div>
-        <div class="weather-information__icon"></div>
+
+        <div class="weather-information">
+          <div class="weather-information__location w600">Warsaw</div>
+          <div class="weather-information__date">Monday, 15.10.2023</div>
+          <div class="weather-information__time">12:12 PM</div>
+          <div class="weather-information__temperature">13°C</div>
+          <div class="weather-information__description">Cloudy</div>
+          <div class="weather-information__icon"></div>
+        </div>
       </div>
-      <div class="weather-details"></div>
+      <div class="weather-details-container">
+        <div class="weather-details"></div>
+        <div class="weather-details"></div>
+        <div class="weather-details"></div>
+        <div class="weather-details"></div>
+      </div>
     </main>
     <script src="main.js"></script>
   </body>
