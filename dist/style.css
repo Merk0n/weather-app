@@ -172,5 +172,6 @@ main {
 }
 
 .forecast-daily__icon {
+  margin-top: 1.5rem;
   font-size: 2rem;
 }
