@@ -23,6 +23,10 @@ const descriptionInfo = document.querySelector(
 );
 const imageWeather = document.querySelector('.image-weather');
 const feelsLikeInfo = document.querySelector('#feels-like');
+const humidityInfo = document.querySelector('#humidity');
+const chanceOfRainInfo = document.querySelector('#chance-of-rain');
+const windSpeedInfo = document.querySelector('#wind-speed');
+const windDirectionInfo = document.querySelector('#wind-direction');
 
 // Event listener - checking weather for searched city
 searchButton.addEventListener('click', () => {
@@ -37,5 +41,12 @@ searchButton.addEventListener('click', () => {
     descriptionInfo.textContent = data.current.condition.text;
     imageWeather.src = data.current.condition.icon;
     feelsLikeInfo.textContent = `${Math.round(data.current.feelslike_c)}°C`;
+    humidityInfo.textContent = `${data.current.humidity}%`;
+    // chance of rain API doesn't work properly - no data i guess
+    chanceOfRainInfo.textContent = `${data.current.precip_in}%`;
+    windSpeedInfo.textContent = `${Math.round(data.current.wind_kph)} km/h`;
+    windDirectionInfo.textContent = data.current.wind_dir;
   });
 });
+
+getCurrentWeather('warsaw');
