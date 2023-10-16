@@ -30,11 +30,11 @@ body {
 
 main {
   display: flex;
-  height: 60vh;
+  height: 56vh;
 }
 
 /* weather-information (left side) */
-.weather-left {
+.weather-basic-container {
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -147,6 +147,7 @@ main {
   justify-content: space-around;
   height: 26vh;
   align-items: flex-end;
+  margin-top: 4rem;
 }
 
 .forecast-daily {
@@ -174,4 +175,77 @@ main {
 .forecast-daily__icon {
   margin-top: 1.5rem;
   font-size: 2rem;
+}
+
+/* smaller screens */
+
+@media (max-width: 1282px) {
+  html {
+    font-size: 56%;
+  }
+}
+
+@media (max-width: 956px) {
+  html {
+    font-size: 42%;
+  }
+}
+
+@media (max-width: 786px) {
+  html {
+    font-size: 38%;
+  }
+  main {
+    height: 48vh;
+  }
+
+  .search-box__input {
+    max-width: 150px;
+  }
+
+  .forecast-daily-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    row-gap: 6rem;
+    height: 100%;
+  }
+  .forecast-daily {
+    align-items: center;
+  }
+}
+
+@media (max-width: 530px) {
+  .search-box__input {
+    max-width: 120px;
+  }
+
+  .forecast-daily-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    row-gap: 6rem;
+    height: 100%;
+  }
+  .forecast-daily {
+    align-items: center;
+  }
+
+  #current-day-plus-seven {
+    grid-column: -3/-2;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 32%;
+  }
+
+  .search-box__input {
+    max-width: 100px;
+  }
+
+  .weather-details {
+    gap: 0;
+  }
 }
