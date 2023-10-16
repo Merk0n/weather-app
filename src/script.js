@@ -1,5 +1,3 @@
-import getCurrentDate from './getCurrentDate';
-
 // getting info about current weather
 const apiKey = 'f1674b3f51d74877b6e95543231510';
 const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=`;
@@ -24,20 +22,20 @@ const descriptionInfo = document.querySelector(
   '.weather-information__description'
 );
 const imageWeather = document.querySelector('.image-weather');
-
-// Starter value
-dateInfo.textContent = getCurrentDate();
+const feelsLikeInfo = document.querySelector('#feels-like');
 
 // Event listener - checking weather for searched city
 searchButton.addEventListener('click', () => {
   getCurrentWeather(searchCity.value).then((data) => {
     locationInfo.textContent = data.location.name;
-    timeInfo.textContent = `Last updated: ${data.location.localtime.substring(
+    dateInfo.textContent = data.location.localtime.substring(0, 10);
+    timeInfo.textContent = `Last updated: ${data.current.last_updated.substring(
       11,
       16
     )}`;
     temperatureInfo.textContent = `${data.current.temp_c}°C`;
     descriptionInfo.textContent = data.current.condition.text;
     imageWeather.src = data.current.condition.icon;
+    feelsLikeInfo.textContent = `${Math.round(data.current.feelslike_c)}°C`;
   });
 });
