@@ -99,8 +99,8 @@
             </svg>
           </div>
           <div class="weather-details__info">
-            <div class="weather-details__label">Chance of rain</div>
-            <div class="weather-details__data" id="chance-of-rain">- %</div>
+            <div class="weather-details__label">Precipitation amount</div>
+            <div class="weather-details__data" id="chance-of-rain">- mm</div>
           </div>
         </div>
         <div class="weather-details">
@@ -127,7 +127,7 @@
         </div>
         <div class="weather-details">
           <div class="weather-details__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 448 512"><style>svg{fill:#ffffff}</style><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg>
           </div>
           <div class="weather-details__info">
             <div class="weather-details__label">Wind direction</div>
@@ -138,165 +138,68 @@
     </main>
     <div class="forecast-daily-container">
       <div class="forecast-daily" id="current-day-plus-one">
-        <div class="forecast-daily__day">Monday</div>
+        <div class="forecast-daily__day0"></div>
         <div class="forecast-daily__temperature">
-          <div class="forecast-daily__temperature-max">20°C</div>
-          <div class="forecast-daily__temperature-min">12°C</div>
+          <div class="forecast-daily__temperature-max0"></div>
+          <div class="forecast-daily__temperature-min0"></div>
         </div>
-        <div class="forecast-daily__icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="3em"
-            viewBox="0 0 512 512"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M96 320c-53 0-96-43-96-96c0-42.5 27.6-78.6 65.9-91.2C64.7 126.1 64 119.1 64 112C64 50.1 114.1 0 176 0c43.1 0 80.5 24.3 99.2 60c14.7-17.1 36.5-28 60.8-28c44.2 0 80 35.8 80 80c0 5.5-.6 10.8-1.6 16c.5 0 1.1 0 1.6 0c53 0 96 43 96 96s-43 96-96 96H96zm-6.8 52c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L89.2 372zm160 0c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L249.2 372zm124.9 64.6L409.2 372c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3z"
-            />
-          </svg>
-        </div>
+        <img src="" class="forecast-daily__icon0"></img>
+        <div class="sm-text forecast-detail0"></div>
       </div>
       <div class="forecast-daily" id="current-day-plus-two">
-        <div class="forecast-daily__day">Tuesday</div>
+        <div class="forecast-daily__day1"></div>
         <div class="forecast-daily__temperature">
-          <div class="forecast-daily__temperature-max">20°C</div>
-          <div class="forecast-daily__temperature-min">12°C</div>
+          <div class="forecast-daily__temperature-max1"></div>
+          <div class="forecast-daily__temperature-min1"></div>
         </div>
-        <div class="forecast-daily__icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="3em"
-            viewBox="0 0 512 512"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M96 320c-53 0-96-43-96-96c0-42.5 27.6-78.6 65.9-91.2C64.7 126.1 64 119.1 64 112C64 50.1 114.1 0 176 0c43.1 0 80.5 24.3 99.2 60c14.7-17.1 36.5-28 60.8-28c44.2 0 80 35.8 80 80c0 5.5-.6 10.8-1.6 16c.5 0 1.1 0 1.6 0c53 0 96 43 96 96s-43 96-96 96H96zm-6.8 52c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L89.2 372zm160 0c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L249.2 372zm124.9 64.6L409.2 372c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3z"
-            />
-          </svg>
-        </div>
+        <img src="" class="forecast-daily__icon1"></img>
+        <div class="sm-text forecast-detail1"></div>
       </div>
       <div class="forecast-daily" id="current-day-plus-three">
-        <div class="forecast-daily__day">Wednesday</div>
+        <div class="forecast-daily__day2"></div>
         <div class="forecast-daily__temperature">
-          <div class="forecast-daily__temperature-max">20°C</div>
-          <div class="forecast-daily__temperature-min">12°C</div>
+          <div class="forecast-daily__temperature-max2"></div>
+          <div class="forecast-daily__temperature-min2"></div>
         </div>
-        <div class="forecast-daily__icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="3em"
-            viewBox="0 0 512 512"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M96 320c-53 0-96-43-96-96c0-42.5 27.6-78.6 65.9-91.2C64.7 126.1 64 119.1 64 112C64 50.1 114.1 0 176 0c43.1 0 80.5 24.3 99.2 60c14.7-17.1 36.5-28 60.8-28c44.2 0 80 35.8 80 80c0 5.5-.6 10.8-1.6 16c.5 0 1.1 0 1.6 0c53 0 96 43 96 96s-43 96-96 96H96zm-6.8 52c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L89.2 372zm160 0c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L249.2 372zm124.9 64.6L409.2 372c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3z"
-            />
-          </svg>
-        </div>
+        <img src="" class="forecast-daily__icon2"></img>
+        <div class="sm-text forecast-detail2"></div>
       </div>
       <div class="forecast-daily" id="current-day-plus-four">
-        <div class="forecast-daily__day">Thursday</div>
+        <div class="forecast-daily__day3"></div>
         <div class="forecast-daily__temperature">
-          <div class="forecast-daily__temperature-max">20°C</div>
-          <div class="forecast-daily__temperature-min">12°C</div>
+          <div class="forecast-daily__temperature-max3"></div>
+          <div class="forecast-daily__temperature-min3"></div>
         </div>
-        <div class="forecast-daily__icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="3em"
-            viewBox="0 0 512 512"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M96 320c-53 0-96-43-96-96c0-42.5 27.6-78.6 65.9-91.2C64.7 126.1 64 119.1 64 112C64 50.1 114.1 0 176 0c43.1 0 80.5 24.3 99.2 60c14.7-17.1 36.5-28 60.8-28c44.2 0 80 35.8 80 80c0 5.5-.6 10.8-1.6 16c.5 0 1.1 0 1.6 0c53 0 96 43 96 96s-43 96-96 96H96zm-6.8 52c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L89.2 372zm160 0c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L249.2 372zm124.9 64.6L409.2 372c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3z"
-            />
-          </svg>
-        </div>
+        <img src="" class="forecast-daily__icon3"></img>
+        <div class="sm-text forecast-detail3"></div>
       </div>
       <div class="forecast-daily" id="current-day-plus-five">
-        <div class="forecast-daily__day">Friday</div>
+        <div class="forecast-daily__day4"></div>
         <div class="forecast-daily__temperature">
-          <div class="forecast-daily__temperature-max">20°C</div>
-          <div class="forecast-daily__temperature-min">12°C</div>
+          <div class="forecast-daily__temperature-max4"></div>
+          <div class="forecast-daily__temperature-min4"></div>
         </div>
-        <div class="forecast-daily__icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="3em"
-            viewBox="0 0 512 512"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M96 320c-53 0-96-43-96-96c0-42.5 27.6-78.6 65.9-91.2C64.7 126.1 64 119.1 64 112C64 50.1 114.1 0 176 0c43.1 0 80.5 24.3 99.2 60c14.7-17.1 36.5-28 60.8-28c44.2 0 80 35.8 80 80c0 5.5-.6 10.8-1.6 16c.5 0 1.1 0 1.6 0c53 0 96 43 96 96s-43 96-96 96H96zm-6.8 52c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L89.2 372zm160 0c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L249.2 372zm124.9 64.6L409.2 372c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3z"
-            />
-          </svg>
-        </div>
+        <img src="" class="forecast-daily__icon4"></img>
+        <div class="sm-text forecast-detail4"></div>
       </div>
       <div class="forecast-daily" id="current-day-plus-six">
-        <div class="forecast-daily__day">Saturday</div>
+        <div class="forecast-daily__day5"></div>
         <div class="forecast-daily__temperature">
-          <div class="forecast-daily__temperature-max">20°C</div>
-          <div class="forecast-daily__temperature-min">12°C</div>
+          <div class="forecast-daily__temperature-max5"></div>
+          <div class="forecast-daily__temperature-min5"></div>
         </div>
-        <div class="forecast-daily__icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="3em"
-            viewBox="0 0 512 512"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M96 320c-53 0-96-43-96-96c0-42.5 27.6-78.6 65.9-91.2C64.7 126.1 64 119.1 64 112C64 50.1 114.1 0 176 0c43.1 0 80.5 24.3 99.2 60c14.7-17.1 36.5-28 60.8-28c44.2 0 80 35.8 80 80c0 5.5-.6 10.8-1.6 16c.5 0 1.1 0 1.6 0c53 0 96 43 96 96s-43 96-96 96H96zm-6.8 52c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L89.2 372zm160 0c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L249.2 372zm124.9 64.6L409.2 372c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3z"
-            />
-          </svg>
-        </div>
+        <img src="" class="forecast-daily__icon5">
+        <div class="sm-text forecast-detail5"></div>
+        </img>
       </div>
       <div class="forecast-daily" id="current-day-plus-seven">
-        <div class="forecast-daily__day">Sunday</div>
+        <div class="forecast-daily__day6"></div>
         <div class="forecast-daily__temperature">
-          <div class="forecast-daily__temperature-max">20°C</div>
-          <div class="forecast-daily__temperature-min">12°C</div>
+          <div class="forecast-daily__temperature-max6"></div>
+          <div class="forecast-daily__temperature-min6"></div>
         </div>
-        <div class="forecast-daily__icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="3em"
-            viewBox="0 0 512 512"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M96 320c-53 0-96-43-96-96c0-42.5 27.6-78.6 65.9-91.2C64.7 126.1 64 119.1 64 112C64 50.1 114.1 0 176 0c43.1 0 80.5 24.3 99.2 60c14.7-17.1 36.5-28 60.8-28c44.2 0 80 35.8 80 80c0 5.5-.6 10.8-1.6 16c.5 0 1.1 0 1.6 0c53 0 96 43 96 96s-43 96-96 96H96zm-6.8 52c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L89.2 372zm160 0c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3L249.2 372zm124.9 64.6L409.2 372c1.3-2.5 3.9-4 6.8-4s5.4 1.5 6.8 4l35.1 64.6c4.1 7.5 6.2 15.8 6.2 24.3v3c0 26.5-21.5 48-48 48s-48-21.5-48-48v-3c0-8.5 2.1-16.9 6.2-24.3z"
-            />
-          </svg>
-        </div>
+        <img src="" class="forecast-daily__icon6"></img>
+        <div class="sm-text forecast-detail6"></div>
       </div>
     </div>
     <script type="module" src="main.js"></script>

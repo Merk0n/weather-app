@@ -1,9 +1,9 @@
 // getting info about current weather
 const apiKey = 'f1674b3f51d74877b6e95543231510';
-const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=`;
+const apiForecastUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&days=7&aqi=no&alerts=no&q=`;
 
-const getCurrentWeather = async (city) => {
-  const response = await fetch(apiUrl + city);
+const getForecastWeather = async (city) => {
+  const response = await fetch(apiForecastUrl + city);
   const data = await response.json();
   console.log(data);
   return data;
@@ -30,7 +30,7 @@ const windDirectionInfo = document.querySelector('#wind-direction');
 
 // Event listener - checking weather for searched city
 searchButton.addEventListener('click', () => {
-  getCurrentWeather(searchCity.value).then((data) => {
+  getForecastWeather(searchCity.value).then((data) => {
     locationInfo.textContent = data.location.name;
     dateInfo.textContent = data.location.localtime.substring(0, 10);
     timeInfo.textContent = `Last updated: ${data.current.last_updated.substring(
@@ -43,10 +43,39 @@ searchButton.addEventListener('click', () => {
     feelsLikeInfo.textContent = `${Math.round(data.current.feelslike_c)}°C`;
     humidityInfo.textContent = `${data.current.humidity}%`;
     // chance of rain API doesn't work properly - no data i guess
-    chanceOfRainInfo.textContent = `${data.current.precip_in}%`;
+    chanceOfRainInfo.textContent = `${data.current.precip_mm}mm`;
     windSpeedInfo.textContent = `${Math.round(data.current.wind_kph)} km/h`;
     windDirectionInfo.textContent = data.current.wind_dir;
+
+    // forecast
+    for (let day = 0; day < 7; day += 1) {
+      const forecastDayElement = document.querySelector(
+        `.forecast-daily__day${day}`
+      );
+      const forecastTemperatureMax = document.querySelector(
+        `.forecast-daily__temperature-max${day}`
+      );
+      const forecastTemperatureMin = document.querySelector(
+        `.forecast-daily__temperature-min${day}`
+      );
+      const forecastIcon = document.querySelector(
+        `.forecast-daily__icon${day}`
+      );
+      const forecastDetail = document.querySelector(`.forecast-detail${day}`);
+      if (forecastDayElement) {
+        forecastDayElement.textContent = data.forecast.forecastday[day].date;
+        forecastTemperatureMax.textContent = `${Math.round(
+          data.forecast.forecastday[day].day.maxtemp_c
+        )}°C`;
+        forecastTemperatureMin.textContent = `${Math.round(
+          data.forecast.forecastday[day].day.mintemp_c
+        )}°C`;
+        forecastIcon.src = data.forecast.forecastday[day].day.condition.icon;
+        forecastDetail.textContent =
+          data.forecast.forecastday[day].day.condition.text;
+      }
+    }
   });
 });
 
-getCurrentWeather('warsaw');
+getForecastWeather('warsaw');
