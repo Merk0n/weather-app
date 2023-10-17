@@ -30,7 +30,6 @@ body {
 
 main {
   display: flex;
-  height: 56vh;
 }
 
 /* weather-information (left side) */
@@ -149,9 +148,8 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 26vh;
   align-items: flex-end;
-  margin-top: 4rem;
+  margin-top: 10rem;
 }
 
 .forecast-daily {
@@ -160,16 +158,19 @@ main {
   align-items: flex-start;
   gap: 1rem;
   font-size: 3rem;
+  padding: 2rem;
 }
 
-.forecast-daily__temperature-max {
+[class^='forecast-daily__day'] {
+  font-size: 1.8rem;
+}
+
+[class^='forecast-daily__temperature-min'] {
+  font-size: 1.8rem;
+}
+
+[class^='forecast-daily__temperature-max'] {
   font-size: 4rem;
-  font-weight: 800;
-}
-
-.forecast-daily__temperature-min {
-  font-size: 2rem;
-  font-weight: 500;
 }
 
 .forecast-daily__icon {
@@ -177,8 +178,8 @@ main {
   font-size: 2rem;
 }
 
-.sm-text {
-  font-size: 2rem;
+[class^='forecast-detail'] {
+  font-size: 1.6rem;
 }
 
 /* smaller screens */
@@ -189,7 +190,13 @@ main {
   }
 }
 
-@media (max-width: 956px) {
+@media (max-width: 1052px) {
+  html {
+    font-size: 48%;
+  }
+}
+
+@media (max-width: 900px) {
   html {
     font-size: 42%;
   }
@@ -227,7 +234,6 @@ main {
   .forecast-daily-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     row-gap: 6rem;
     height: 100%;
   }
