@@ -9,7 +9,7 @@ const getForecastWeather = async (city) => {
   return data;
 };
 
-// DOM elements
+// DOM elementss
 const searchCity = document.querySelector('.search-box__input');
 const searchButton = document.querySelector('.search-btn');
 const locationInfo = document.querySelector('.weather-information__location');
