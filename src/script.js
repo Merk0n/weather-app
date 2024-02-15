@@ -9,17 +9,17 @@ const getForecastWeather = async (city) => {
   return data;
 };
 
-// DOM elementss
+// DOM elements
 const searchCity = document.querySelector('.search-box__input');
 const searchButton = document.querySelector('.search-btn');
 const locationInfo = document.querySelector('.weather-information__location');
 const dateInfo = document.querySelector('.weather-information__date');
 const timeInfo = document.querySelector('.weather-information__time');
 const temperatureInfo = document.querySelector(
-  '.weather-information__temperature'
+  '.weather-information__temperature',
 );
 const descriptionInfo = document.querySelector(
-  '.weather-information__description'
+  '.weather-information__description',
 );
 const imageWeather = document.querySelector('.image-weather');
 const feelsLikeInfo = document.querySelector('#feels-like');
@@ -35,7 +35,7 @@ searchButton.addEventListener('click', () => {
     dateInfo.textContent = data.location.localtime.substring(0, 10);
     timeInfo.textContent = `Last updated: ${data.current.last_updated.substring(
       11,
-      16
+      16,
     )}`;
     temperatureInfo.textContent = `${data.current.temp_c}°C`;
     descriptionInfo.textContent = data.current.condition.text;
@@ -50,29 +50,28 @@ searchButton.addEventListener('click', () => {
     // forecast
     for (let day = 0; day < 7; day += 1) {
       const forecastDayElement = document.querySelector(
-        `.forecast-daily__day${day}`
+        `.forecast-daily__day${day}`,
       );
       const forecastTemperatureMax = document.querySelector(
-        `.forecast-daily__temperature-max${day}`
+        `.forecast-daily__temperature-max${day}`,
       );
       const forecastTemperatureMin = document.querySelector(
-        `.forecast-daily__temperature-min${day}`
+        `.forecast-daily__temperature-min${day}`,
       );
       const forecastIcon = document.querySelector(
-        `.forecast-daily__icon${day}`
+        `.forecast-daily__icon${day}`,
       );
       const forecastDetail = document.querySelector(`.forecast-detail${day}`);
       if (forecastDayElement) {
         forecastDayElement.textContent = data.forecast.forecastday[day].date;
         forecastTemperatureMax.textContent = `${Math.round(
-          data.forecast.forecastday[day].day.maxtemp_c
+          data.forecast.forecastday[day].day.maxtemp_c,
         )}°C`;
         forecastTemperatureMin.textContent = `${Math.round(
-          data.forecast.forecastday[day].day.mintemp_c
+          data.forecast.forecastday[day].day.mintemp_c,
         )}°C`;
         forecastIcon.src = data.forecast.forecastday[day].day.condition.icon;
-        forecastDetail.textContent =
-          data.forecast.forecastday[day].day.condition.text;
+        forecastDetail.textContent = data.forecast.forecastday[day].day.condition.text;
       }
     }
   });

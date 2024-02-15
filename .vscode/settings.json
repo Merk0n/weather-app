@@ -1,3 +1,16 @@
 {
-  "cSpell.ignoreWords": ["feelslike", "forecastday", "localtime", "precip"]
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "cSpell.words": [
+    "feelslike",
+    "forecastday",
+    "localtime",
+    "maxtemp",
+    "mintemp",
+    "precip"
+  ]
 }
