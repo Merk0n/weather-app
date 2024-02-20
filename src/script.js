@@ -32,7 +32,7 @@ const windDirectionInfo = document.querySelector('#wind-direction');
 searchButton.addEventListener('click', () => {
   getForecastWeather(searchCity.value).then((data) => {
     locationInfo.textContent = data.location.name;
-    dateInfo.textContent = data.location.localtime.substring(0, 10);
+    dateInfo.textContent = data.current.last_updated.substring(0, 10);
     timeInfo.textContent = `Last updated: ${data.current.last_updated.substring(
       11,
       16,
