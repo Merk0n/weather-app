@@ -1,12 +1,12 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
+  "homepage": "https://merk0n.github.io/weather-app/",
   "description": "",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
